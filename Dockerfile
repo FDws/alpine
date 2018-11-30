@@ -7,6 +7,4 @@ COPY ./.vimrc /root/
 
 RUN sed -i "s#http.*alpine#$APK_MIRRORS#g" /etc/apk/repositories \
         && apk update \
-        && apk add vim \
-        && echo 'alias ll="ls -l --color=auto"' >> ~/.bashrc
-
+        && apk add vim
