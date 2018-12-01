@@ -7,4 +7,4 @@ COPY ./.vimrc /root/
 
 RUN sed -i "s#http.*alpine#$APK_MIRRORS#g" /etc/apk/repositories \
         && apk update \
-        && apk add vim
+        && apk add --no-cache vim
